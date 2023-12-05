@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/digital-7-mono" rel="stylesheet">
+    <title>timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="timer-wrapper">
+        <!---- round -->
+        <div class="round-wrapper">
+            <div class="round">
+                <span id="round-number">00</span>
+            </div>
+            <label>ROUND</label>
+            <input id="round-input" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')" required/>
+        </div>            
+        <!---- break -->
+        <div class="break-wrapper">
+            <div class="break">
+                <span id="break-number">00</span>
+            </div>
+            <label>BREAK</label>
+            <input id="break-input" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')" required/>
+        </div>
+
+        <!---- time -->
+        <div class="time-wrapper">
+            <div class="time">
+                <span id="time-min">00</span>
+                <span class="separate">:</span>
+                <span id="time-sec">00</span>
+            </div>
+            <label>TIME</label>
+            <div class="input-div">
+                <input id="min-input" inputmode="numeric" placeholder="minuty" oninput="this.value = this.value.replace(/\D+/g, '')" required/>
+                <input id="sec-input" min="00" max="60" inputmode="numeric" placeholder="sekundy"oninput="this.value = this.value.replace(/\D+/g, '')" required/>
+            </div>
+           <!---- <input type="time" id="appt" name="appt" min="09:00" max="18:00" required /> --->
+        </div>
+        <button id="submit">Start</button>
+    </div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
